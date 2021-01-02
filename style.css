@@ -1,0 +1,60 @@
+#main{
+    text-align: center;
+}
+#header{
+    font-size: 3em;
+    font-family: 'Courier New', Courier, monospace /*cursive*/;
+
+}
+
+#generate{
+    position: static;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace /*'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif*/;
+    margin: 1em;
+    padding: 10px 1em;
+    background-color: azure;
+}
+
+#content{
+    position: static;
+    display: inline-flex;
+    justify-content: center;
+    border: thin dotted black;
+
+}
+.content{
+    border: thin solid gray;
+    border-top-width: 0;
+}
+.ch{
+    font-family: 'Courier New', Courier, monospace;
+    border: thin dotted black;
+    background-color: gainsboro;
+    
+    padding: 10px 4em;
+
+}
+.e{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #fdfdfd;
+    /*text-align: left;*/
+    white-space: pre;
+    tab-size: 2;
+    padding: 10px 4em;
+}
+#annotation{
+    /*font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;*/
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-align: left;
+    
+    padding: 2em 33vw;
+}
+dl{
+    font-weight: normal;
+    padding: 0 1em;
+    line-height: 0.95em;
+}
