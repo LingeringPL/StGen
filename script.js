@@ -78,7 +78,7 @@ function generate(){
         }  
     }
     for(let i = 0; i < IP; i++){
-        m = m + IndividualProperty[i] + ":" + ((i==2||i==3) ? "\t":"\t\t"+(i>3?"\t\t\t ":"\t")) + (aIndividual[i]>=0 ? " " : "") + (aIndividual[i]<10&&aIndividual[i]>-10 ? " " : "") + aIndividual[i] + "<br>";
+        m = m + IndividualProperty[i] + ":" + ((i==2||i==3) ? "\t":"\t\t"+(i>3?"\t\t\t":" ")) + (aIndividual[i]>=0 ? " " : "") + (aIndividual[i]<10&&aIndividual[i]>-10 ? " " : "") + aIndividual[i] + "<br>";
     }
     _ie.innerHTML = m;
     m = "";
