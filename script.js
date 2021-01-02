@@ -1,11 +1,12 @@
 
 const IndividualProperty = ["H.DEV","W.DEV","RACE","OCC","OPE","CON","EXT","AGR","NEU"];
-const Race = ["Human","Elf","Dwarf","Giant","Dragon","Vampire","Angel","Devil","Fairy","Humanoid","Slime","Ogre","Vegetative","Small animal","Insect"];
-const Occ = ["Wayfarer","Adventurer",
-             "Fighter","Warlock","Archer","Priest",
+const Race = ["Human","Elf","Dwarf","Giant","Dragon","Vampire","Angel","Devil","Fairy","Golem","Android","Slime","Ogre","Vegetative","Small animal","Insect","Dragonewt","Sith","Therian.","Lich"];
+const Occ = ["Wayfarer","Bard","Adventurer",
+             "Fighter","Sorcerer","Ranger","Priest",
              "Assassin","Prophet","Gunner","Wise",
-             "Merchant","Pharmacist","Alchemist","Scientist",
-             "Trainer","Doctor","Engineer","Missionary"];
+             "Trainer","Doctor","Engineer","Missionary",             
+             "Necromancer","Summoner","Tamer","Exorcist",
+             "Merchant","Pharmacist","Alchemist","Scientist"];
 const GeneralProperty = ["STR","DEF","DEX","PIE",
                          "VIT","MIND","AGI","INT",
                          "P.RE","M.RE",
