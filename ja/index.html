@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script defer type="text/javascript" src="../script.js"></script>
+
+        <title>Status Generator</title>
+    </head>
+    <body>
+        <div id=main>
+            <div id=header>
+                Status Generator<br>
+                <button type="button" id="generate">生成</button>
+            </div>
+            <div id=content>
+                <div class=content id=in>
+                    <div class=ch>
+                        個性
+                    </div>
+                    <div class=e id=ie></div>
+                </div>
+                <div class=content id=ge>
+                    <div class=ch>
+                        一般
+                    </div>
+                    <div class=e id=ce></div>
+                </div>
+                <div class=content id=el>
+                    <div class=ch>
+                        属性
+                    </div>
+                    <div class=e id=ee></div>
+                </div>
+            </div>
+            <hr>
+            <div id=annotation>
+                <p>個性</p>
+                <dl>
+                    <dt>H.DEV</dt>
+                    <dd>Height Deviation(身長偏差) - その種族内の平均からどのくらい離れているか。</dd>
+                    <dt>W.DEV</dt>
+                    <dd>Weight Deviation(体重偏差) - その種族内の平均からどのくらい離れているか。</dd>
+                    <dt>OCC</dt>
+                    <dd>Occupation(職業) - どの職業に就いているか。</dd>
+                    <dt>OPE</dt>
+                    <dd>Openness(開放性) - 実行理念に関わり、より正か負に大きいほど「独創性」か「一貫性」が高い。<br>例：困難な状況にあったとき、柔軟な対応を模索するか 計画に則った行動を執り続けるか。</dd>
+                    <dt>CON</dt>
+                    <dd>Conscientiousness(誠実性) - 行動理念に関わり、より正か負に大きいほど「真面目さ」か「軽率さ」が高い。<br>例：計画を立てるにあたり、緻密にするか 粗雑にするか。</dd>
+                    <dt>EXT</dt>
+                    <dd>Extraversion(外向性) - 社交理念に関わり、より正か負に大きいほど交遊に「積極的」か「消極的」に近い。<br>例：大人数での行動を好むか 個人での行動を好むか。</dd>
+                    <dt>AGR</dt>
+                    <dd>Agreeableness(協調性) - 信頼理念に関わり、より正か負に大きいほど「友好的」か「挑戦的」に近い。<br>例：個々の問題に直面したとき、共に解決しようとするか 率先して自分のを解決しようとするか。</dd>
+                    <dt>NEU</dt>
+                    <dd>Neuroticism(情動性) - 感受理念に関わり、より正に大きいほど感情的であり、心理的幸福度が低い。<br>例：自身の行動に対する反応を受け取ったとき、感情的になりうるか 否か。</dd>
+                </dl>
+                <p>一般</p>
+                <dl>
+                    <dt>STR</dt>
+                    <dd>Strength(攻撃力)</dd>
+                    <dt>DEF</dt>
+                    <dd>Defence(防御力)</dd>
+                    <dt>DEX</dt>
+                    <dd>Dexterity(器用さ)</dd>
+                    <dt>PIE</dt>
+                    <dd>Piety(敬虔さ)</dd>
+                    <dt>VIT</dt>
+                    <dd>Vitality(生命力)</dd>
+                    <dt>INT</dt>
+                    <dd>Intelligence(知力)</dd>
+                    <dt>P.RE</dt>
+                    <dd>Physical Resistance(対物耐久力)</dd>
+                    <dt>M.RE</dt>
+                    <dd>Magical Resistance(対魔耐久力)</dd>
+                    <dt>PER</dt>
+                    <dd>Perception(知覚力) - 周囲の変化や細やかな異変に対してどれだけ敏感か。</dd>
+                    <dt>CHR</dt>
+                    <dd>Charisma(信服力)</dd>
+                    <dt>KAR</dt>
+                    <dd>Karma(業) - その持つ業がどれだけ深刻か。少ないほど良い。</dd>
+                </dl>
+                <p>属性</p>
+                <dl>
+                    <dt>IGN</dt>
+                    <dd>Ignis = 火</dd>
+                    <dt>GEL</dt>
+                    <dd>Gelus = 氷</dd>
+                    <dt>TON</dt>
+                    <dd>Tonitrus = 雷</dd>
+                    <dt>TER</dt>
+                    <dd>Terra = 土</dd>
+                    <dt>E</dt>
+                    <dd>Effectiveness(効力)</dd>
+                    <dt>P</dt>
+                    <dd>Purity(純度)</dd>
+                    <dt>EQU</dt>
+                    <dd>Equilibrium(平衡性) - 互いの属性の力にどれだけ干渉しないか。</dd>
+                    <dt>STA</dt>
+                    <dd>Stability(安定性) - 属性の力がどれだけ安定しているか。</dd>
+                </dl>
+            </div>
+        </div>
+    </body>
+</html>
