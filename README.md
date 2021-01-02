@@ -1,2 +1,2 @@
 # StGen
-for private use.
+for personal use.
