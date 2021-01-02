@@ -34,7 +34,7 @@
     border: thin dotted black;
     background-color: gainsboro;
     
-    padding: 10px 4em;
+    padding: 10px 3.5em;
 
 }
 .e{
@@ -43,7 +43,7 @@
     /*text-align: left;*/
     white-space: pre;
     tab-size: 2;
-    padding: 10px 4em;
+    padding: 10px 3.5em;
 }
 #annotation{
     /*font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;*/
