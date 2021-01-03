@@ -98,7 +98,7 @@ html[lang=ja] dl{
         background-color: gainsboro;
         writing-mode: vertical-lr;
         transform: rotate(-180deg);
-        padding: 1em 10px;
+        padding: 1ex 10px;
     }
     
     .e{
@@ -107,7 +107,7 @@ html[lang=ja] dl{
         text-align: left;
         white-space: pre;
         tab-size: 2;
-        padding: 1em 10px;
+        padding: 1ex 10px;
 
     }
     #annotation{
