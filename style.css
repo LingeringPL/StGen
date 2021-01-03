@@ -12,7 +12,7 @@
     text-align: center;
     border-radius: 4px;
     font-size: 24px;
-    font-family: 'Courier New', Courier, monospace /*'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif*/;
+    font-family: 'Courier New', Courier, "Meiryo UI Regular", monospace /*'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif*/;
     margin: 1em;
     padding: 10px 1em;
     background-color: azure;
@@ -25,12 +25,13 @@
     border: thin dotted black;
 
 }
+
 .content{
     border: thin solid gray;
     border-top-width: 0;
 }
 .ch{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, "Meiryo UI Regular", monospace;
     border: thin dotted black;
     background-color: gainsboro;
     
@@ -38,7 +39,7 @@
 
 }
 .e{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, "Meiryo UI Regular", monospace;
     background-color: #fdfdfd;
     /*text-align: left;*/
     white-space: pre;
@@ -47,14 +48,74 @@
 }
 #annotation{
     /*font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;*/
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, "Meiryo UI Regular", monospace;
     font-weight: bold;
     text-align: left;
     
     padding: 2em 33vw;
 }
+
 dl{
     font-weight: normal;
     padding: 0 1em;
     line-height: 0.95em;
+}
+html[lang=ja] dl{
+    font-weight: normal;
+    padding: 0 1em;
+    line-height: 1em;
+}
+
+@media screen and (max-width: 480px){
+    #content{
+        position: static;
+        display: inline-flex;
+        flex-flow: column;
+        justify-content: center;
+        border: thin dotted black;
+    
+    }
+    
+    .content{
+        border: thin solid gray;
+        display: inline-flex;
+        flex-flow: row;
+
+        border-top-width: 0;
+    }
+    
+    html[lang=ja] .ch{
+        font-family: 'Courier New', Courier, "Meiryo UI Regular", monospace;
+        border: thin dotted black;
+        background-color: gainsboro;
+        writing-mode: vertical-lr;
+        transform: rotate(0);
+        padding: 3.5em 10px;
+    }
+    .ch{
+        font-family: 'Courier New', Courier, "Meiryo UI Regular", monospace;
+        border: thin dotted black;
+        background-color: gainsboro;
+        writing-mode: vertical-lr;
+        transform: rotate(-180deg);
+        padding: 1em 10px;
+    }
+    
+    .e{
+        font-family: 'Courier New', Courier, "Meiryo UI Regular", monospace;
+        background-color: #fdfdfd;
+        text-align: left;
+        white-space: pre;
+        tab-size: 2;
+        padding: 1em 10px;
+
+    }
+    #annotation{
+        /*font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;*/
+        font-family: 'Courier New', Courier, "Meiryo UI Regular", monospace;
+        font-weight: bold;
+        text-align: left;
+        
+        padding: 2em 10vw;
+    }
 }
