@@ -6,7 +6,8 @@ const Occ = ["Wanderer","Bard","Adventurer",
              "Assassin","Prophet","Gunner","Wise",
              "Trainer","Doctor","Engineer","Missionary",
              "Necromancer","Summoner","Tamer","Exorcist",
-             "Merchant","Pharmacist","Alchemist","Scientist"];
+             "Merchant","Pharmacist","Alchemist","Scientist",
+             "Blacksmith","Astrologist","Bakery"];
 const GeneralProperty = ["STR","DEF","DEX","PIE",
                          "VIT","MIND","AGI","INT",
                          "P.RE","M.RE",
