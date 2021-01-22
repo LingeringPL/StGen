@@ -1,14 +1,17 @@
 
 const IndividualProperty = ["H.DEV","W.DEV","RACE","OCC","OPE","CON","EXT","AGR","NEU"];
 const Race = ["Human","Elf","Dwarf","Giant","Dragon","Vampire","Angel","Devil","Fairy","Golem","Android","Slime","Ogre","Vegetative","Animal","Insect","Dragonewt","Sith","Therian.","Lich"];
-const Occ = ["Wanderer","Bard","Adventurer","Shepherd","Hermit",
-             "Fighter","Sorcerer","Ranger","Priest",
-             "Assassin","Prophet","Gunner","Wise",
-             "Warlord","Caster","Seeker","Oracle",
-             "Trainer","Doctor","Engineer","Missionary",
-             "Necromancer","Summoner","Tamer","Exorcist",
-             "Pedlar","Pharmacist","Alchemist","Scientist",
-             "Blacksmith","Enhancer","Astrologist","Bakery"];
+const Occ = ["Wanderer","Bard","Adventurer","Shepherd","Hermit", //Tier-0
+             "Fighter","Sorcerer","Ranger","Priest",             //Type-A Tier-1
+             "Assassin","Prophet","Gunner","Wise",               //Type-A Tier-2
+             "Knight","Spellsword","Scout","Paladin",            //Type-A Tier-3
+             "Warlord","Caster","Seeker","Oracle",               //Type-A Tier-4
+             "Trainer","Doctor","Engineer","Missionary",         //Type-B
+             "Necromancer","Summoner","Tamer","Exorcist",        //Type-C
+             "Pedlar","Pharmacist","Alchemist","Scientist",      //Type-D
+             "Blacksmith","Enhancer","Astrologist","Bakery",     //Type-E
+             "Strategist","Chronomancer","Tactician","Geomancer" //Type-F
+            ];
 const GeneralProperty = ["STR","DEF","DEX","PIE",
                          "VIT","MIND","AGI","INT",
                          "P.RE","M.RE",
