@@ -41,11 +41,16 @@
 .e{
     font-family: 'Courier New', Courier, "Meiryo UI Regular", monospace;
     background-color: #fdfdfd;
-    /*text-align: left;*/
+    display: inline-flex;
     white-space: pre;
-    tab-size: 2;
     padding: 10px 3.5em;
     line-height: 1;
+}
+.s{
+    text-align: right;
+}
+.v{
+    text-align: right;
 }
 #annotation{
     /*font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;*/
@@ -107,11 +112,20 @@ html[lang=ja] dl{
         background-color: #fdfdfd;
         text-align: left;
         white-space: pre;
-        tab-size: 2;
         padding: 1ex 10px;
         line-height: 0.975em;
 
     }
+    .s{
+        text-align: right;
+    }
+    #ces{
+        padding: 0 0 0 1ch;
+    } 
+    .v{
+        text-align: right;
+    }
+    
     #annotation{
         /*font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;*/
         font-family: 'Courier New', Courier, "Meiryo UI Regular", monospace;

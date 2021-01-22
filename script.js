@@ -29,8 +29,14 @@ const GP = GeneralProperty.length;
 const EP = ElementProperty.length;
 
 const _ie = document.getElementById("ie");
+const _ies = document.getElementById("ies");
+const _iev = document.getElementById("iev");
 const _ce = document.getElementById("ce");
+const _ces = document.getElementById("ces");
+const _cev = document.getElementById("cev");
 const _ee = document.getElementById("ee");
+const _ees = document.getElementById("ees");
+const _eev = document.getElementById("eev");
 
 let LAn = [0,0];
 let Ln = 0;
@@ -55,6 +61,7 @@ function rNorm(){//https://stabucky.com/wp/archives/9263 参考
 }
 function generate(){
     let m = "";
+    let n = "";
     let t;
     //Individual
     for(let i = 0; i < IP; i++){
@@ -80,29 +87,37 @@ function generate(){
         }  
     }
     for(let i = 0; i < IP; i++){
-        m = m + IndividualProperty[i] + ":" + ((i==2||i==3) ? "\t":"\t\t"+(i>3?"\t\t\t":" ")) + (aIndividual[i]>=0 ? " " : "") + (aIndividual[i]<10&&aIndividual[i]>-10 ? " " : "") + aIndividual[i] + "<br>";
+        m = m + IndividualProperty[i] + ": " + "<br>";
+        n = n + aIndividual[i] + "<br>";
     }
-    _ie.innerHTML = m;
-    m = "";
+    _ies.innerHTML = m;
+    _iev.innerHTML = n;
+    m = "", n = "";
     //General
     for(let i = 0; i < GP; i++){
         aGeneral[i] = Math.floor(Math.random()*100);
     }
     for(let i = 0; i < GP; i++){
         t = Math.floor(aGeneral[i]/(100/rank.length));
-        m = m + GeneralProperty[i] + ":\t" + (aGeneral[i]<10 ? " " : "") + aGeneral[i] + " - " + rank[i!=13 ? t : rank.length-1-t] + "<br>";
+        m = m + GeneralProperty[i] + ": " + "<br>";
+        n = n + (aGeneral[i]<10 ? " " : "") + aGeneral[i] + " - " + rank[i!=13 ? t : rank.length-1-t] + "<br>";
         
     }
-    _ce.innerHTML = m;
-    m = "";
+    _ces.innerHTML = m;
+    _cev.innerHTML = n;
+    m = "", n = "";
     //Element
     for(let i = 0; i < EP; i++){
         aElement[i] = Math.floor(Math.random()*100);
     }
     for(let i = 0; i < EP; i++){
-        m = m + ElementProperty[i] + ":\t" + (aElement[i]<10 ? " " : "") + aElement[i] + " - " + rank[Math.floor(aElement[i]/(100/rank.length))] + "<br>";
+        m = m + ElementProperty[i] + ": " + "<br>";
+        n = n + (aElement[i]<10 ? " " : "") + aElement[i] + " - " + rank[Math.floor(aElement[i]/(100/rank.length))] + "<br>";
     }
-    _ee.innerHTML = m;
+    _ees.innerHTML = m;
+    _eev.innerHTML = n;
+    m = "", n = "";
+
 }
 
 
