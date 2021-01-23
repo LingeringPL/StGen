@@ -1,6 +1,6 @@
 
-const IndividualProperty = ["H.DEV","W.DEV","RACE","OCC","OPE","CON","EXT","AGR","NEU"];
-const Race = ["Human","Elf","Dwarf","Giant","Dragon","Vampire","Angel","Devil","Fairy","Golem","Android","Slime","Ogre","Vegetative","Animal","Insect","Dragonewt","Sith","Therian.","Lich"];
+const IndividualProperty = ["H.DEV","W.DEV","RACE","OCC","OPE","CON","EXT","AGR","NEU","HUM"];
+const Race = ["Human","Elf","Dwarf","Giant","Dragon","Vampire","Angel","Devil","Fairy","Golem","Android","Slime","Ogre","Vegetative","Animal","Insect","Dragonewt","Sith","Therianthrope","Lich"];
 const Occ = ["Wanderer","Bard","Adventurer","Shepherd","Hermit", //Tier-0
              "Fighter","Sorcerer","Ranger","Priest",             //Type-A Tier-1
              "Assassin","Prophet","Gunner","Wise",               //Type-A Tier-2
@@ -21,6 +21,7 @@ const ElementProperty = ["IGN.E","IGN.P",
                          "GEL.E","GEL.P",
                          "TON.E","TON.P",
                          "TER.E","TER.P",
+                         "AER.E","AER.P",
                          "EQU","STA"];
 
 const rank = ["E","D","C","B","A","S"];
@@ -80,6 +81,10 @@ function generate(){
             }
             case 3: {
                 aIndividual[i] = Occ[Math.round(Math.random()*(Occ.length-1))].padStart(Ln, " ");
+                break;
+            }
+            case 9: {
+                aIndividual[i] = Math.floor(Math.random()*100);
                 break;
             }
             default: {
