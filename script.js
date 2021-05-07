@@ -1,16 +1,18 @@
 
-const IndividualProperty = ["H.DEV","W.DEV","RACE","OCC","OPE","CON","EXT","AGR","NEU","HUM"];
-const Race = ["Human","Elf","Dwarf","Giant","Dragon","Vampire","Angel","Devil","Fairy","Golem","Android","Slime","Ogre","Vegetative","Animal","Insect","Dragonewt","Sith","Therianthrope","Lich"];
-const Occ = ["Wanderer","Bard","Adventurer","Shepherd","Hermit", //Tier-0
-             "Fighter","Sorcerer","Ranger","Priest",             //Type-A Tier-1
-             "Assassin","Prophet","Gunner","Wise",               //Type-A Tier-2
-             "Knight","Spellsword","Scout","Paladin",            //Type-A Tier-3
-             "Warlord","Caster","Seeker","Oracle",               //Type-A Tier-4
-             "Trainer","Doctor","Engineer","Missionary",         //Type-B
-             "Necromancer","Summoner","Tamer","Exorcist",        //Type-C
-             "Pedlar","Pharmacist","Alchemist","Scientist",      //Type-D
-             "Blacksmith","Enhancer","Astrologist","Bakery",     //Type-E
-             "Strategist","Chronomancer","Tactician","Geomancer" //Type-F
+const IndividualProperty = ["H.DEV","W.DEV","S/A.D","RACE","OCC","OPE","CON","EXT","AGR","NEU","HUM"];
+const Race = ["Human","Elf","Dwarf","Giant","Dragon","Vampire","Angel","Devil","Fairy","Golem","Android","Slime","Ogre","Vegetative","Mammal","Reptile","Amphibian","Arthropod","Dragonewt","Sith","Therianthrope","Lich","Immaterial","Merfolk"];
+const Occ = ["Wanderer","Bard","Adventurer","Shepherd","Hermit",    //Tier-0
+             "Fighter","Sorcerer","Ranger","Priest",                //Type-A Tier-1
+             "Assassin","Prophet","Gunner","Wise",                  //Type-A Tier-2
+             "Knight","Spellsword","Scout","Paladin",               //Type-A Tier-3
+             "Warlord","Caster","Seeker","Oracle",                  //Type-A Tier-4
+             "Trainer","Doctor","Engineer","Missionary",            //Type-B
+             "Necromancer","Summoner","Tamer","Exorcist",           //Type-C
+             "Archaeologist","Pharmacist","Alchemist","Scientist",  //Type-D
+             "Blacksmith","Enhancer","Astrologist","Enchanter",     //Type-E
+             "Strategist","Chronomancer","Tactician","Geomancer",   //Type-F
+             "Brewer","Baker","Confectioner","Chef",                //Type-G
+             "Pedler","Informant","Merchant","Intermediary"         //Type-H
             ];
 const GeneralProperty = ["STR","DEF","DEX","PIE",
                          "VIT","MIND","AGI","INT",
@@ -71,19 +73,20 @@ function generate(){
     for(let i = 0; i < IP; i++){
         switch(i){
             case 0:
-            case 1: {
+            case 1: 
+            case 2: {
                 aIndividual[i] = (Math.round(rNorm()*120)/100).toFixed(2);
                 break;
             }
-            case 2: {
+            case 3: {
                 aIndividual[i] = Race[Math.round(Math.random()*(Race.length-1))].padStart(Ln, " ");
                 break;
             }
-            case 3: {
+            case 4: {
                 aIndividual[i] = Occ[Math.round(Math.random()*(Occ.length-1))].padStart(Ln, " ");
                 break;
             }
-            case 9: {
+            case 10: {
                 aIndividual[i] = Math.floor(Math.random()*100);
                 break;
             }
