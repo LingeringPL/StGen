@@ -30,6 +30,11 @@
     border: thin solid gray;
     border-top-width: 0;
 }
+
+#sp{
+    display: none;
+}
+
 .ch{
     font-family: 'Courier New', Courier, "Meiryo UI Regular", monospace;
     border: thin dotted black;
@@ -76,6 +81,7 @@ html[lang=ja] dl{
 #ex{
     padding: 0.3em 0 0.3em;
 }
+
 
 @media screen and (max-width: 480px){
     #content{

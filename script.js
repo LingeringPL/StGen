@@ -131,7 +131,11 @@ function generate(){
 
 }
 
+function switcha(){
+    
+}
 
 document.body.onload = go;
 
 document.getElementById("generate").onclick = generate;
+document.getElementById("sp").onclick = switcha;
