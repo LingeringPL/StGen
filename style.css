@@ -27,7 +27,6 @@
     display: inline-flex;
     justify-content: center;
     border: thin dotted black;
-
 }
 
 .content{
@@ -52,7 +51,7 @@ html[lang=ja] .content{
     background-color: #fdfdfd;
     display: inline-flex;
     white-space: pre;
-    padding: 10px /*3.5em*/;
+    padding: 10px;
     line-height: 1;
 }
 
@@ -81,7 +80,6 @@ html[lang=ja] .s, html[lang=ja] .v{
     font-family: 'Courier New', Courier, sans-serif, monospace;
     font-weight: bold;
     text-align: left;
-    
     padding: 2em 33vw;
 }
 
@@ -110,7 +108,6 @@ html[lang=ja] dd{
         flex-flow: column;
         justify-content: center;
         border: thin dotted black;
-    
     }
     
     .content{
@@ -118,36 +115,40 @@ html[lang=ja] dd{
         display: inline-flex;
         flex-flow: row;
         border-top-width: 0;
-        width: 30ch;
+        width: 9ch;
+        padding: 0 33.33vw 0 0;
     }
     
     html[lang=ja] .content {
-        width: 30ch;
-        /* width: 26ch; */
+        width: 18ch;
     }
     
     .ch{
-        font-family: monospace, sans-serif;
+        font-family: monospace;
         border: thin dotted black;
         background-color: gainsboro;
         writing-mode: vertical-lr;
         transform: rotate(-180deg);
-        padding: 1ex 10px;
+        padding: 1ex 0.5ch;
     }
 
     html[lang=ja] .ch{
         transform: rotate(0);
-        padding: 3.5em 10px;
+        padding: 3.5em 0.5ch;
     }
 
     .e{
-        font-family: monospace, sans-serif;
+        font-family: monospace;
         background-color: #fdfdfd;
         text-align: left;
         white-space: pre;
-        padding: 1ex 10px;
+        padding: 1ex 1ch;
         line-height: 0.975em;
 
+    }
+
+    html[lang=ja] .e{
+        font-family: monospace;
     }
 
     .s{
