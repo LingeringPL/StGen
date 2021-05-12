@@ -118,7 +118,8 @@ html[lang=ja] dd{
     }
     
     html[lang=ja] .content {
-        width: 26ch;
+        width: 30ch;
+        /* width: 26ch; */
     }
     
     .ch{
