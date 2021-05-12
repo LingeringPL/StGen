@@ -117,6 +117,10 @@ html[lang=ja] dd{
         width: 30ch;
     }
     
+    html[lang=ja] .content {
+        width: 26ch;
+    }
+    
     .ch{
         font-family: monospace, sans-serif;
         border: thin dotted black;
