@@ -1,30 +1,30 @@
 
-const IndividualProperty = ["H.DEV","W.DEV","S/A.D","RACE","OCC","OPE","CON","EXT","AGR","NEU","HUM"];
-const Race = ["Human","Elf","Dwarf","Giant","Dragon","Vampire","Angel","Devil","Fairy","Golem","Android","Slime","Ogre","Vegetative","Mammal","Reptile","Amphibian","Arthropod","Dragonewt","Sith","Therianthrope","Lich","Immaterial","Merfolk"];
-const Occ = ["Wanderer","Bard","Adventurer","Shepherd","Hermit",    //Tier-0
-             "Fighter","Sorcerer","Ranger","Priest",                //Type-A Tier-1
-             "Assassin","Prophet","Gunner","Wise",                  //Type-A Tier-2
-             "Knight","Spellsword","Scout","Paladin",               //Type-A Tier-3
-             "Warlord","Caster","Seeker","Oracle",                  //Type-A Tier-4
-             "Trainer","Doctor","Engineer","Missionary",            //Type-B
-             "Necromancer","Summoner","Tamer","Exorcist",           //Type-C
-             "Archaeologist","Pharmacist","Alchemist","Scientist",  //Type-D
-             "Blacksmith","Enhancer","Astrologist","Enchanter",     //Type-E
-             "Strategist","Chronomancer","Tactician","Geomancer",   //Type-F
-             "Brewer","Baker","Confectioner","Chef",                //Type-G
-             "Pedler","Informant","Merchant","Intermediary"         //Type-H
+const IndividualProperty = ["身長偏差","体重偏差","齢差偏差","種族","職業","開放性","誠実性","外向性","協調性","情動性","人間性"];
+const Race = ["人間","エルフ","ドワーフ","巨人","竜","吸血鬼","天使","悪魔","妖精","ゴーレム","人造生物","粘体生物","鬼人","植物生物","哺乳生物","爬虫生物","両生生物","節足生物","竜人","獣精","獣人","呪屍","無形","人魚"];
+const Occ = ["放浪者","吟遊詩人","冒険者","牧者","隠者",
+             "戦士","魔法使い","レンジャー","プリースト",
+             "暗殺者","予言者","ガンナー","賢者",
+             "騎士","魔法剣士","斥候","聖騎士",
+             "将軍","魔術士","偵察者","神託者",
+             "トレーナー","医者","エンジニア","宣教師",
+             "死霊術師","召喚術師","魔物飼い","祈祷師",
+             "考古学者","薬剤師","錬金術師","科学者",
+             "鍛冶屋","強化術師","占星術師","付加術師",
+             "ストラテジスト","クロノマンサー","戦術家","ジオマンサー",
+             "醸造屋","パン屋","菓子屋","調理師",
+             "行商人","情報屋","商人","斡旋者"
             ];
-const GeneralProperty = ["STR","DEF","DEX","PIE",
-                         "VIT","MIND","AGI","INT",
-                         "P.RE","M.RE",
-                         "LUCK","PER",
-                         "CHR","KAR"];
-const ElementProperty = ["IGN.E","IGN.P",
-                         "GEL.E","GEL.P",
-                         "TON.E","TON.P",
-                         "TER.E","TER.P",
-                         "AER.E","AER.P",
-                         "EQU","STA"];
+const GeneralProperty = ["攻撃","防御","器用","敬虔",
+                         "生命","精神","敏捷","知力",
+                         "耐物","耐魔",
+                         "運","知覚",
+                         "カリスマ","業"];
+const ElementProperty = ["効力／火","純度／火",
+                         "効力／氷","純度／氷",
+                         "効力／雷","純度／雷",
+                         "効力／地","純度／地",
+                         "効力／空","純度／空",
+                         "平衡性","安定性"];
 
 const rank = ["E","D","C","B","A","S"];
 const aIndividual = [];

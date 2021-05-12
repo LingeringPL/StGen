@@ -1,10 +1,10 @@
 #main{
     text-align: center;
 }
+
 #header{
     font-size: 3em;
     font-family: 'Courier New', Courier, monospace /*cursive*/;
-
 }
 
 #generate{
@@ -29,34 +29,50 @@
 .content{
     border: thin solid gray;
     border-top-width: 0;
+    width: 29ch;
+}
+
+html[lang=ja] .content{
+    width: 25ch;
 }
 
 #sp{
-    display: none;
+    font-family: 'Courier New', Courier, "Meiryo UI Regular", monospace;
+    margin: 0 0 1em 0;
 }
 
 .ch{
     font-family: 'Courier New', Courier, "Meiryo UI Regular", monospace;
     border: thin dotted black;
     background-color: gainsboro;
-    
     padding: 10px 3.5em;
-
 }
+
 .e{
     font-family: 'Courier New', Courier, "Meiryo UI Regular", monospace;
     background-color: #fdfdfd;
     display: inline-flex;
     white-space: pre;
-    padding: 10px 3.5em;
+    padding: 10px /*3.5em*/;
     line-height: 1;
 }
-.s{
+
+#iev{
+    width: 13ch
+}
+
+html[lang=ja] #iev{
+    width: 9ch;
+}
+
+.s, .v{
     text-align: right;
 }
-.v{
-    text-align: right;
+
+html[lang=ja] .s, html[lang=ja] .v{
+    line-height: 1.1;
 }
+
 #annotation{
     /*font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;*/
     font-family: 'Courier New', Courier, "Meiryo UI Regular", monospace;
@@ -67,21 +83,22 @@
 }
 
 dl{
-    
     font-weight: normal;
     padding: 0 1em;
     line-height: 0.95em;
 }
+
 html[lang=ja] dl{
-    font-weight: normal;
-    padding: 0 1em;
     line-height: 1em;
+}
+
+html[lang=ja] dd{
+    padding: 0.3em 0 0.3em;
 }
 
 #ex{
     padding: 0.3em 0 0.3em;
 }
-
 
 @media screen and (max-width: 480px){
     #content{
@@ -97,18 +114,10 @@ html[lang=ja] dl{
         border: thin solid gray;
         display: inline-flex;
         flex-flow: row;
-
         border-top-width: 0;
+        width: 32ch;
     }
     
-    html[lang=ja] .ch{
-        font-family: 'Courier New', Courier, "Meiryo UI Regular", monospace;
-        border: thin dotted black;
-        background-color: gainsboro;
-        writing-mode: vertical-lr;
-        transform: rotate(0);
-        padding: 3.5em 10px;
-    }
     .ch{
         font-family: 'Courier New', Courier, "Meiryo UI Regular", monospace;
         border: thin dotted black;
@@ -117,7 +126,12 @@ html[lang=ja] dl{
         transform: rotate(-180deg);
         padding: 1ex 10px;
     }
-    
+
+    html[lang=ja] .ch{
+        transform: rotate(0);
+        padding: 3.5em 10px;
+    }
+
     .e{
         font-family: 'Courier New', Courier, "Meiryo UI Regular", monospace;
         background-color: #fdfdfd;
@@ -130,11 +144,25 @@ html[lang=ja] dl{
     .s{
         text-align: right;
     }
+
     #ces{
         padding: 0 0 0 1ch;
-    } 
+    }
+
+    html[lang=ja] #ces{
+        padding: 0 0 0 2ch;
+    }
+
     .v{
         text-align: right;
+    }
+
+    #cev, #eev{
+        padding: 0 0 0 7ch;
+    }
+
+    html[lang=ja] #cev, html[lang=ja] #eev{
+        padding: 0 0 0 3ch;
     }
     
     #annotation{

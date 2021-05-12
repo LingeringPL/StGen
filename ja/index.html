@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" href="../style.css">
-        <script defer type="text/javascript" src="../script.js"></script>
+        <script defer type="text/javascript" src="script.js"></script>
 
         <title>Status Generator</title>
     </head>
@@ -47,75 +47,82 @@
             <div id=annotation>
                 <p>個性</p>
                 <dl>
-                    <dt>H.DEV</dt>
-                    <dd>Height Deviation(身長偏差) - その種族内の平均からどのくらい離れているか。<br>
+                    <dt>身長偏差</dt>
+                    <dd>その種族内の平均からどのくらい離れているか。<br>
                         <div id=ex>例 -2:やや低い 0:平均 2:やや高い</div></dd>
-                    <dt>W.DEV</dt>
-                    <dd>Weight Deviation(体重偏差) - その種族内の平均からどのくらい離れているか。<br>
+                    <dt>体重偏差</dt>
+                    <dd>その種族内の平均からどのくらい離れているか。<br>
                         <div id=ex>例 -2:やや軽い 0:平均 2:やや重い</div></dd>
-                    <dt>S/A.D</dt>
-                    <dd>Superficial age and Actual age difference Deviation(外面年齢・実年齢差偏差) - その実年齢からどのくらい離れて(若く／老いて)見えるか。<br>
+                    <dt>齢差偏差 (外面年齢・実年齢差偏差)</dt>
+                    <dd>その実年齢からどのくらい離れて(若く／老いて)見えるか。<br>
                         <div id=ex>例 -1:すこし若く見える 0:相応 1:すこし老いて見える</div></dd>
-                    <dt>OCC</dt>
-                    <dd>Occupation(職業) - どの職業に就いているか。</dd>
-                    <dt>OPE</dt>
-                    <dd>Openness(開放性) - 実行理念に関わり、より正か負に大きいほど「独創性」か「一貫性」が高い。<br>例：困難な状況にあったとき、柔軟な対応を模索するか 計画に則った行動を執り続けるか。</dd>
-                    <dt>CON</dt>
-                    <dd>Conscientiousness(誠実性) - 行動理念に関わり、より正か負に大きいほど「真面目さ」か「軽率さ」が高い。<br>例：計画を立てるにあたり、緻密にするか 粗雑にするか。</dd>
-                    <dt>EXT</dt>
-                    <dd>Extraversion(外向性) - 社交理念に関わり、より正か負に大きいほど交遊に「積極的」か「消極的」に近い。<br>例：大人数での行動を好むか 個人での行動を好むか。</dd>
-                    <dt>AGR</dt>
-                    <dd>Agreeableness(協調性) - 信頼理念に関わり、より正か負に大きいほど「友好的」か「挑戦的」に近い。<br>例：個々の問題に直面したとき、共に解決しようとするか 率先して自分のを解決しようとするか。</dd>
-                    <dt>NEU</dt>
-                    <dd>Neuroticism(情動性) - 感受理念に関わり、より正に大きいほど感情的であり、心理的幸福度が低い。<br>例：自身の行動に対する反応を受け取ったとき、感情的になりうるか 否か。</dd>
-                    <dt>HUM</dt>
-                    <dd>Humaneness(人間性) - どれだけ他の個体に思いやりや博愛があるか。AGRに少し関係する。</dd>
+                    <dt>職業</dt>
+                    <dd>どの職業に就いているか。</dd>
+                    <dt>開放性</dt>
+                    <dd>実行理念に関わり、より正か負に大きいほど「独創性」か「一貫性」が高い。<br>
+                        <div id=ex>例 困難な状況にあったとき、柔軟な対応を模索するか 計画に則った行動を執り続けるか。</div></dd>
+                    <dt>誠実性</dt>
+                    <dd>行動理念に関わり、より正か負に大きいほど「真面目さ」か「軽率さ」が高い。<br>
+                        <div id=ex>例 計画を立てるにあたり、緻密にするか 粗雑にするか。</div></dd>
+                    <dt>外向性</dt>
+                    <dd>社交理念に関わり、より正か負に大きいほど交遊に「積極的」か「消極的」に近い。<br>
+                        <div id=ex>例 大人数での行動を好むか 個人での行動を好むか。</div></dd>
+                    <dt>協調性</dt>
+                    <dd>信頼理念に関わり、より正か負に大きいほど「友好的」か「挑戦的」に近い。<br>
+                        <div id=ex>例 個々の問題に直面したとき、共に解決しようとするか 率先して自分のを解決しようとするか。</div></dd>
+                    <dt>情動性</dt>
+                    <dd>感受理念に関わり、より正に大きいほど感情的である。<br>
+                        <div id=ex>例 自身の行動に対する反応を受け取ったとき、感情的になりうる(感涙する 激昂する 等)か 否か。</div></dd>
+                    <dt>人間性</dt>
+                    <dd>どれだけ他の個体に思いやりや博愛があるか。AGRに少し関係する。</dd>
                 </dl>
                 <p>一般</p>
                 <dl>
-                    <dt>STR</dt>
-                    <dd>Strength(攻撃力)</dd>
-                    <dt>DEF</dt>
-                    <dd>Defence(防御力)</dd>
-                    <dt>DEX</dt>
-                    <dd>Dexterity(器用さ)</dd>
-                    <dt>PIE</dt>
-                    <dd>Piety(敬虔さ)</dd>
-                    <dt>VIT</dt>
-                    <dd>Vitality(生命力)</dd>
-                    <dt>INT</dt>
-                    <dd>Intelligence(知力)</dd>
-                    <dt>P.RE</dt>
-                    <dd>Physical Resistance(対物耐久力)</dd>
-                    <dt>M.RE</dt>
-                    <dd>Magical Resistance(対魔耐久力)</dd>
-                    <dt>PER</dt>
-                    <dd>Perception(知覚力) - 周囲の変化や細やかな異変に対してどれだけ敏感か。</dd>
-                    <dt>CHR</dt>
-                    <dd>Charisma(信服力)</dd>
-                    <dt>KAR</dt>
-                    <dd>Karma(業) - その持つ業がどれだけ深刻か。少ないほど良い。</dd>
+                    <dt>攻撃</dt>
+                    <dd>Strength</dd>
+                    <dt>防御</dt>
+                    <dd>Defence</dd>
+                    <dt>器用</dt>
+                    <dd>Dexterity</dd>
+                    <dt>敬虔</dt>
+                    <dd>Piety</dd>
+                    <dt>生命</dt>
+                    <dd>Vitality</dd>
+                    <dt>知力</dt>
+                    <dd>Intelligence</dd>
+                    <dt>耐物 (対物耐久力)</dt>
+                    <dd>Physical Resistance</dd>
+                    <dt>耐魔 (対魔耐久力)</dt>
+                    <dd>Magical Resistance</dd>
+                    <dt>運</dt>
+                    <dd>Luck</dd>
+                    <dt>知覚</dt>
+                    <dd>Perception - 周囲の変化や細やかな異変に対してどれだけ敏感か。</dd>
+                    <dt>カリスマ (信服力)</dt>
+                    <dd>Charisma</dd>
+                    <dt>業</dt>
+                    <dd>Karma - その持つ業がどれだけ深刻か。少ないほど良い。</dd>
                 </dl>
                 <p>属性</p>
                 <dl>
-                    <dt>IGN</dt>
-                    <dd>Ignis = 火</dd>
-                    <dt>GEL</dt>
-                    <dd>Gelus = 氷</dd>
-                    <dt>TON</dt>
-                    <dd>Tonitrus = 雷</dd>
-                    <dt>TER</dt>
-                    <dd>Terra = 土</dd>
-                    <dt>AER</dt>
-                    <dd>Aer = 空</dd>
-                    <dt>E</dt>
-                    <dd>Effectiveness(効力)</dd>
-                    <dt>P</dt>
-                    <dd>Purity(純度)</dd>
-                    <dt>EQU</dt>
-                    <dd>Equilibrium(平衡性) - 互いの属性の力にどれだけ干渉しないか。</dd>
-                    <dt>STA</dt>
-                    <dd>Stability(安定性) - 属性の力がどれだけ安定しているか。</dd>
+                    <dt>火</dt>
+                    <dd>Ignis - 熱、乾燥に作用する。</dd>
+                    <dt>氷</dt>
+                    <dd>Gelus - 冷、湿潤に作用する。</dd>
+                    <dt>雷</dt>
+                    <dd>Tonitrus - 力、光に作用する。</dd>
+                    <dt>地</dt>
+                    <dd>Terra - 気象、自然に作用する。</dd>
+                    <dt>空</dt>
+                    <dd>Aer - 気候、影響力、波動に作用する。</dd>
+                    <dt>効力</dt>
+                    <dd>Effectiveness - 高いほど効果が高い。</dd>
+                    <dt>純度</dt>
+                    <dd>Purity - 高いほど望まぬ影響を起こしづらい。</dd>
+                    <dt>平衡性</dt>
+                    <dd>Equilibrium - 互いの属性の力にどれだけ干渉しないか。</dd>
+                    <dt>安定性</dt>
+                    <dd>Stability - 属性の力がどれだけ安定しているか。</dd>
                 </dl>
             </div>
         </div>
