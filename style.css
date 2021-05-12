@@ -36,20 +36,15 @@ html[lang=ja] .content{
     width: 25ch;
 }
 
-#sp{
-    font-family: 'Courier New', Courier, "Meiryo UI Regular", monospace;
-    margin: 0 0 1em 0;
-}
-
 .ch{
-    font-family: 'Courier New', Courier, "Meiryo UI Regular", monospace;
+    font-family: 'Courier New', Courier, sans-serif, monospace;
     border: thin dotted black;
     background-color: gainsboro;
     padding: 10px 3.5em;
 }
 
 .e{
-    font-family: 'Courier New', Courier, "Meiryo UI Regular", monospace;
+    font-family: 'Courier New', Courier, sans-serif, monospace;
     background-color: #fdfdfd;
     display: inline-flex;
     white-space: pre;
@@ -62,7 +57,7 @@ html[lang=ja] .content{
 }
 
 html[lang=ja] #iev{
-    width: 9ch;
+    width: 12ch;
 }
 
 .s, .v{
@@ -75,7 +70,7 @@ html[lang=ja] .s, html[lang=ja] .v{
 
 #annotation{
     /*font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;*/
-    font-family: 'Courier New', Courier, "Meiryo UI Regular", monospace;
+    font-family: 'Courier New', Courier, sans-serif, monospace;
     font-weight: bold;
     text-align: left;
     
@@ -117,9 +112,13 @@ html[lang=ja] dd{
         border-top-width: 0;
         width: 32ch;
     }
+
+    html[lang=ja] .content{
+        width: 27ch;
+    }
     
     .ch{
-        font-family: 'Courier New', Courier, "Meiryo UI Regular", monospace;
+        font-family: 'Courier New', Courier, sans-serif, monospace;
         border: thin dotted black;
         background-color: gainsboro;
         writing-mode: vertical-lr;
@@ -133,7 +132,7 @@ html[lang=ja] dd{
     }
 
     .e{
-        font-family: 'Courier New', Courier, "Meiryo UI Regular", monospace;
+        font-family: 'Courier New', Courier, sans-serif, monospace;
         background-color: #fdfdfd;
         text-align: left;
         white-space: pre;
@@ -150,7 +149,7 @@ html[lang=ja] dd{
     }
 
     html[lang=ja] #ces{
-        padding: 0 0 0 2ch;
+        padding: 0 0 0 0ch;
     }
 
     .v{
@@ -162,12 +161,12 @@ html[lang=ja] dd{
     }
 
     html[lang=ja] #cev, html[lang=ja] #eev{
-        padding: 0 0 0 3ch;
+        padding: 0 0 0 6ch;
     }
     
     #annotation{
         /*font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;*/
-        font-family: 'Courier New', Courier, "Meiryo UI Regular", monospace;
+        font-family: 'Courier New', Courier, sans-serif, monospace;
         font-weight: bold;
         text-align: left;
         
