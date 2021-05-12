@@ -52,12 +52,16 @@ html[lang=ja] .content{
     line-height: 1;
 }
 
+html[lang=ja] .ch, html[lang=ja] .e{
+    font-family: monospace, sans-serif;
+}
+
 #iev{
     width: 13ch
 }
 
 html[lang=ja] #iev{
-    width: 12ch;
+    width: 14ch;
 }
 
 .s, .v{
@@ -140,6 +144,7 @@ html[lang=ja] dd{
         line-height: 0.975em;
 
     }
+
     .s{
         text-align: right;
     }
@@ -151,7 +156,7 @@ html[lang=ja] dd{
     html[lang=ja] #ces{
         padding: 0 0 0 0ch;
     }
-
+    
     .v{
         text-align: right;
     }
@@ -161,7 +166,7 @@ html[lang=ja] dd{
     }
 
     html[lang=ja] #cev, html[lang=ja] #eev{
-        padding: 0 0 0 6ch;
+        padding: 0 0 0 8ch;
     }
     
     #annotation{
@@ -169,7 +174,6 @@ html[lang=ja] dd{
         font-family: 'Courier New', Courier, sans-serif, monospace;
         font-weight: bold;
         text-align: left;
-        
         padding: 2em 10vw;
     }
 }
