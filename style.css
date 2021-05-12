@@ -114,15 +114,11 @@ html[lang=ja] dd{
         display: inline-flex;
         flex-flow: row;
         border-top-width: 0;
-        width: 32ch;
-    }
-
-    html[lang=ja] .content{
-        width: 27ch;
+        width: 30ch;
     }
     
     .ch{
-        font-family: 'Courier New', Courier, sans-serif, monospace;
+        font-family: monospace, sans-serif;
         border: thin dotted black;
         background-color: gainsboro;
         writing-mode: vertical-lr;
@@ -136,7 +132,7 @@ html[lang=ja] dd{
     }
 
     .e{
-        font-family: 'Courier New', Courier, sans-serif, monospace;
+        font-family: monospace, sans-serif;
         background-color: #fdfdfd;
         text-align: left;
         white-space: pre;
@@ -156,7 +152,7 @@ html[lang=ja] dd{
     html[lang=ja] #ces{
         padding: 0 0 0 0ch;
     }
-    
+
     .v{
         text-align: right;
     }
