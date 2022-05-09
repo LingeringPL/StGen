@@ -46,7 +46,8 @@ html[lang=ja] .content{
     padding: 10px 3.5em;
 }
 
-.e{
+.e, .be{
+    z-index: -1;
     font-family: 'Courier New', Courier, sans-serif, monospace;
     background-color: #fdfdfd;
     display: inline-flex;
@@ -68,12 +69,48 @@ html[lang=ja] #iev{
 }
 
 .s, .v{
+    z-index: 0;
     text-align: right;
 }
 
 html[lang=ja] .s, html[lang=ja] .v{
-    line-height: 1.1;
+    line-height: 1;
 }
+
+.be{
+    display: none;
+    z-index: 0;
+    position: absolute;
+    flex-flow: column wrap-reverse;
+    padding: unset;
+    margin: 10px;
+}
+
+#bce{
+    width: 12ch;
+}
+
+#bee{
+    width: 13ch;
+}
+
+html[lang=ja] #bce{
+    width: 13.5ch;
+}
+
+html[lang=ja] #bee{
+    width: 13.4ch;
+}
+
+.bbce, .bbee{
+    background-color: darkolivegreen;
+    height: 1em;
+    opacity: 12.5%;
+}
+
+/* html[lang=ja] .bbce, html[lang=ja] .bbee{
+    height: 1.1em;
+} */
 
 #annotation{
     /*font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;*/
@@ -124,6 +161,7 @@ html[lang=ja] dd{
     }
     
     .ch{
+        z-index: 1;
         font-family: monospace;
         border: thin dotted black;
         background-color: gainsboro;
@@ -137,21 +175,21 @@ html[lang=ja] dd{
         padding: 3.5em 0.5ch;
     }
 
-    .e{
+    .e, .be{
+        z-index: initial;
         font-family: monospace;
-        background-color: #fdfdfd;
         text-align: left;
-        white-space: pre;
         padding: 1ex 1ch;
         line-height: 0.975em;
-
     }
 
+    
     html[lang=ja] .e{
         font-family: monospace;
     }
 
-    .s{
+    .s, .v{
+        z-index: 1;
         text-align: right;
     }
 
@@ -163,10 +201,6 @@ html[lang=ja] dd{
         padding: 0 0 0 0ch;
     }
 
-    .v{
-        text-align: right;
-    }
-
     #cev, #eev{
         padding: 0 0 0 7ch;
     }
@@ -174,7 +208,33 @@ html[lang=ja] dd{
     html[lang=ja] #cev, html[lang=ja] #eev{
         padding: 0 0 0 8ch;
     }
+
+    .be{
+        display: none;
+        z-index: 0;
+        position: absolute;
+        flex-flow: column wrap-reverse;
+        padding: unset;
+        margin: 1ex 3.25ch+1ex;
+    }
     
+    html[lang=ja] .be{
+        margin: 1ex 4.75ch;
+    }
+
+    #bce, #bee{
+        width: 21ch;
+    }
+
+    html[lang=ja] #bce, html[lang=ja] #bee{
+        width: 22.5ch;
+    }
+
+
+    html[lang=en] .bbce, html[lang=en] .bbee{
+        height: 0.975em;
+    }
+
     #annotation{
         /*font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;*/
         font-family: 'Courier New', Courier, sans-serif, monospace;

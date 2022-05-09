@@ -1,38 +1,21 @@
+const lang = "ja";
+const langf = fetch("../lang.csv");
+let langt = "";
+let langa = [];
 
-const IndividualProperty = ["身長偏差","体重偏差","齢差偏差","種族","職業","開放性","誠実性","外向性","協調性","情動性","人間性"];
-const Race = ["人間","エルフ","ドワーフ","巨人","竜","吸血鬼","天使","悪魔","妖精","ゴーレム","人造生物","粘体生物","鬼人","持肢植物","哺乳生物","爬虫生物","両生生物","節足生物","竜人","獣精","獣人","呪屍","無形","人魚"];
-const Occ = ["放浪者","吟遊詩人","冒険者","牧者","隠者",
-             "戦士","魔法使い","レンジャー","プリースト",
-             "暗殺者","予言者","ガンナー","賢者",
-             "騎士","魔法剣士","斥候","聖騎士",
-             "将軍","魔術士","偵察者","神託者",
-             "トレーナー","医者","エンジニア","宣教師",
-             "死霊術師","召喚術師","魔物飼い","祈祷師",
-             "考古学者","薬剤師","錬金術師","科学者",
-             "鍛冶屋","強化術師","占星術師","付加術師",
-             "ストラテジスト","クロノマンサー","戦術家","ジオマンサー",
-             "醸造屋","パン屋","菓子屋","調理師",
-             "行商人","情報屋","商人","斡旋者"
-            ];
-const GeneralProperty = ["攻撃","防御","器用","敬虔",
-                         "生命","精神","敏捷","知力",
-                         "耐物","耐魔",
-                         "運","知覚",
-                         "カリスマ","カルマ"];
-const ElementProperty = ["効力／火","純度／火",
-                         "効力／氷","純度／氷",
-                         "効力／雷","純度／雷",
-                         "効力／地","純度／地",
-                         "効力／空","純度／空",
-                         "平衡性","安定性"];
+var IndividualProperty = [];
+var Race = [];
+var Occ = [];
+var GeneralProperty = [];
+var ElementProperty = [];
 
 const rank = ["E","D","C","B","A","S"];
 const aIndividual = [];
 const aGeneral = [];
 const aElement = [];
-const IP = IndividualProperty.length;
-const GP = GeneralProperty.length;
-const EP = ElementProperty.length;
+var IP = 0;
+var GP = 0;
+var EP = 0;
 
 const _ie = document.getElementById("ie");
 const _ies = document.getElementById("ies");
@@ -43,13 +26,45 @@ const _cev = document.getElementById("cev");
 const _ee = document.getElementById("ee");
 const _ees = document.getElementById("ees");
 const _eev = document.getElementById("eev");
+const _bce = document.getElementById("bce");
+const _bee = document.getElementById("bee");
 
 const _e = document.getElementsByClassName("e");
+const _be = document.getElementsByClassName("be");
+const _bbce = document.getElementsByClassName("bbce");
+const _bbee = document.getElementsByClassName("bbee");
 
 let LAn = [0,0];
 let Ln = 0;
 
+async function AnalyzeLangFile(text){
+    langt = text.replaceAll(" ","").replaceAll('\r',"").split("\n");
+    langa = langt.slice(1).map(element=>{return (element.split(",")[langt[0].split(",").indexOf(lang)])});
+
+    let i = langa.indexOf("~");
+    IndividualProperty = langa.slice(0,i);
+    langa = langa.slice(i+1);
+    i = langa.indexOf("~");
+    Race = langa.slice(0,i);
+    langa = langa.slice(i+1);
+    i = langa.indexOf("~");
+    Occ = langa.slice(0,i);
+    langa = langa.slice(i+1);
+    i = langa.indexOf("~");
+    GeneralProperty = langa.slice(0,i);
+    langa = langa.slice(i+1);
+    i = langa.indexOf("~");
+    ElementProperty = langa.slice(0,i);
+
+    IP = IndividualProperty.length;
+    GP = GeneralProperty.length;
+    EP = ElementProperty.length;
+    
+}
+
 async function go(){
+    await langf.then(res=>res.text().then(text=>AnalyzeLangFile(text)));
+    
     Race.forEach(function(value){
         LAn[0] = LAn[0]<value.length?value.length:LAn[0];
     });
@@ -59,18 +74,33 @@ async function go(){
     LAn.forEach(function(value){
         Ln = Ln<value?value:Ln;
     });
+    for(let i = 0; i < GP; i++){
+        o = document.createElement("div");
+        o.className = "bbce";
+        o.id = "bc"+i;
+        _bce.appendChild(o);
+    }
+    for(let i = 0; i < EP; i++){
+        o = document.createElement("div");
+        o.className = "bbee";
+        o.id = "be"+i;
+        _bee.appendChild(o);
+    }
 }
 function rNorm(){//https://stabucky.com/wp/archives/9263 参考
     let s = 0;
-    for(let i = 0; i < 12; i++){
+    for(let i = 0; i < 8; i++){
         s += Math.random();
     }
-    return s-6;
+    return s-4;
 }
 function generate(){
+    _bce.style.display = "inline-flex";
+    _bee.style.display = "inline-flex";
     let m = "";
     let n = "";
     let t;
+    let o;
     //Individual
     for(let i = 0; i < IP; i++){
         switch(i){
@@ -114,7 +144,16 @@ function generate(){
         t = Math.floor(aGeneral[i]/(100/rank.length));
         m = m + GeneralProperty[i] + ": " + "<br>";
         n = n + (aGeneral[i]<10 ? " " : "") + aGeneral[i] + " - " + rank[i!=13 ? t : rank.length-1-t] + "<br>";
-        
+    }
+    for(let i = 0; i < GP; i++){
+        switch(i){
+            case 13:
+                _bbce[i].style.width = 99-aGeneral[i]+"%";
+                break;
+            default:
+                _bbce[i].style.width = aGeneral[i]+"%";
+                break;
+        }
     }
     _ces.innerHTML = m;
     _cev.innerHTML = n;
@@ -127,6 +166,13 @@ function generate(){
         t = Math.floor(aElement[i]/(100/rank.length));
         m = m + ElementProperty[i] + ": " + "<br>";
         n = n + (aElement[i]<10 ? " " : "") + aElement[i] + " - " + rank[t] + "<br>";
+    }
+    for(let i = 0; i < EP; i++){
+        switch(i){
+            default:
+                _bbee[i].style.width = aElement[i]+"%";
+                break;
+        }
     }
     _ees.innerHTML = m;
     _eev.innerHTML = n;
